@@ -26,9 +26,12 @@ public class MyEditor {
 
     private ShapeStorage currentShape;
 
-    private static final MyEditor INSTANCE = new MyEditor();
+    private static MyEditor INSTANCE;
 
     public static MyEditor getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new MyEditor();
+        }
         return INSTANCE;
     }
 
